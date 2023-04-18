@@ -26,3 +26,9 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+//plantilla para modelos de grafico componentes
+Route::get('/plantilla', function () {
+    return view('plantilla');
+});
