@@ -14,8 +14,14 @@ module.exports = {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
-        },
+        },        
     },
 
-    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+    daisyui: {
+        themes: ["light"],
+    },
+
+    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography'), 
+              require("daisyui")
+    ],
 };
