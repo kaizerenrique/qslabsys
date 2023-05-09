@@ -28,6 +28,18 @@ Route::middleware([
 });
 
 
+//configuraciones rutas
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    //permisos
+    Route::get('/configuraciones/permisos', function () {
+        return view('configuraciones/permisos');
+    })->name('permisos');
+});
+
 //plantilla para modelos de grafico componentes
 Route::get('/plantilla', function () {
     return view('plantilla');
